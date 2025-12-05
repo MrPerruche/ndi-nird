@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toggle Dark Mode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+    <body>
+      <div class="header">
+        <h1>Démarche NIRD</h1>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <span class="icon-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+              <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/>
+            </svg>
+          </span>
+          <span class="icon-light">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+              <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <hr class="separator"/>
+        <h2>Numérique Inclusif Responsable Durable</h2>
+      <div class="">
+        <h3>Collecte massive de données personnelles</h3>
+        <p>Les grandes entreprises comme Windows collectent des informations sur :</p>
+        <p id="alinea">- Ce que tu fais</p>
+        <p id="alinea">- Ce que tu regarde</p>
+        <p id="alinea">- Ce que tu écris</p>
+        <p id="alinea">...</p>
+        <br/>
+        <h3 id="alinea">Ces données peuvent être :</h3>
+        <p id="alinea2">- analysées automatiquement</p>
+        <p id="alinea2">- vendues à des partenaires</p>
+        <p id="alinea2">- utilisées pour te profiler</p>
+        <p id="alinea2"><b>- Tu n’as presque aucun contrôle réel</b></p>
+        <br/>
+        <h3 id="alinea3">Exemple Windows :</h3>
+        <p id="alinea5">Windows collecte beaucoup de données et envoie 
+          des informations à propos de ton ordinateur, tes habitudes, ton 
+          historique de recherche, les applications utilisées, ils récupèrent
+          tout et il est impossible de s’en protéger complètement.</p>
+        <br/>
+        <h3>Pouvoir excessif</h3>
+        <p id="alinea">Quelques entreprises décident de ce que tu vois, 
+          ce que tu peux installer, de ce qui est “autorisé”.</p>
+        <p id="alinea">Avoir un compte Microsoft  est presque obligatoire.
+          En effet beaucoup de fonctions demandent d’avoir un compte.</p>
+        <p id="alinea">Le code du logiciel est fermé (closed source), personne ne peut 
+          vérifier ce que fait vraiment Windows et ce qui est enregistré.</p>
+          <br/>
+      </div>
+
+
+      <!-- GAME DESCRIPTION -->
+
+    <h2>Créer un système d'exploitation éthique,</h2>
+
+    <p>- c'est possible. Constatez par vous même: essayez ce mini-jeu / simulation, où vous deverez prendre des décisions pour que votre entreprise survie!</p>
+    
+      <!-- GAME -->
+
+    <div class="container">
+      <div class="square">
+        <div class="group" style="display: flex; flex-direction: row; width: 100%; height: 100%;">
+          <div class="screen-square" style="height: 30vh; flex-grow: 1;">
+
+            <div class="group">
+              <img src="assets/market.png"/>
+              <div class="bar-container">
+                <div class="bar-fill" id="market-bar" style="background-color: #68d;"></div>
+              </div>
+
+              <img src="assets/anger.png"/>
+              <div class="bar-container">
+                <div class="bar-fill" id="anger-bar" style="background-color: #b57;"></div>
+              </div>
+            </div>
+
+            <div>
+              <p id="date">01-01-1970</p></div>
+
+              <p id="problem">Le mini-jeu n'a pas été chargé! Cela est signe d'une erreur ou d'un autre problème technique. Veuillez recharger la page, et si cela ne fonctionne pas, appuyer sur CTRL SHIFT R.</p>
+
+          </div>
+        </div>
+
+        <hr class="separator" />
+
+        <div class="group" style="display: flex; flex-direction: row; width: 100%; height: 100%;">
+          <p style="width: 10vh; color: var(--dark-text);">
+            ..__..<br/>
+            ..\/..<br/>
+            |>..<|<br/>
+            ../\..<br/>
+            ..‾‾..
+          </p>
+
+          <div class="screen-square" style="height: 30vh; flex-grow: 1;">
+            <div class="group" style="display: flex; flex-direction: row; flex-grow: 1; width: 100%;">
+              
+
+              <div class="screen-square hover-highlight" style="height: 100%; flex-grow: 1;" onclick="chooseSolution(1);">
+                <p id="fix1">Abc</p>
+
+                <div class="bottom">
+                  <div class="group">
+                    <img src="assets/market.png"/>
+                    <div id="use1" style="width: 80px;">&gt;&gt;&gt;</div>
+                    <img src="assets/anger.png"/>
+                    <div id="anger1" style="width: 80px;">&gt;&gt;&gt;</div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="screen-square hover-highlight" style="height: 100%; flex-grow: 1;" onclick="chooseSolution(2);">
+                <p id="fix2">def</p>
+                <div class="bottom">
+                  <div class="group">
+                    <img src="assets/market.png"/>
+                    <div id="use2" style="width: 80px;">&gt;&gt;&gt;</div>
+                    <img src="assets/anger.png"/>
+                    <div id="anger2" style="width: 80px;">&gt;&gt;&gt;</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p style="width: 10vh; color: var(--dark-text);">
+            ......<br/>
+            ..()..<br/>
+            ()..()<br/>
+            ..()..<br/>
+            ......
+          </p>
+        </div>
+      </div>
+  <br/>
+  <h2>Qu'est ce que le NIRD ?</h2>
+  <p>La démarche NIRD, c’est une idée assez simple qui montre qu'on peut faire autrement avec le numérique à l’école. Qu’il soit plus accessible pour tous, plus respectueux de nos données et de l’environnement, et surtout moins dépendant de certains systèmes propriétaires qui deviennent souvent vite obsolètes, comme on le remarque avec la fin de Windows 10.</p>
+  <h3>Concrètement, NIRD s’appuie sur trois valeurs :</h3>
+    <p id="alinea">- L’inclusion, pour que chaque élève et chaque enseignant puisse utiliser le numérique dans de bonnes conditions.</p>
+    <p id="alinea">- La responsabilité, en choisissant des outils libres, sobres et plus respectueux de la vie privée.</p>
+    <p id="alinea">- La durabilité, en donnant une seconde vie aux ordinateurs grâce à Linux et au reconditionnement, plutôt que de jeter et racheter sans cesse.</p>
+  <p>La démarche avance pas à pas : on commence par se mobiliser, on teste des choses, puis on les intègre dans le quotidien de l’établissement.
+  Les enseignants intéressés peuvent rejoindre un espace d’échanges sur Tchap, pour partager leurs questions, leurs idées, leurs réussites, et aider leur établissement à devenir pilote du projet.</p>
+  <p>L’utilisation progressive de Linux est centrale : c’est une manière simple et concrète de réduire les coûts, de prolonger le matériel et d’ouvrir de nouvelles possibilités pédagogiques, souvent plus créatives.</p>
+  <p>NIRD s’inspire de l’expérience réussie du lycée Carnot de Bruay-la-Buissière, et a maintenant envie de se diffuser dans d’autres écoles, collèges et lycées.</p>
+  <p>C’est une démarche qui vient du terrain, portée par des enseignants, avec l’envie d’agir dès maintenant pour aller vers un numérique plus libre, plus écologique et plus solidaire.</p>
+  <script src="theme.js"></script>
+  </body>
+</html>

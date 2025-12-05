@@ -1,0 +1,195 @@
+:root {
+  --console-border: #4b5563;
+  --console-bg: #f7f1e9;
+  --screen-border: #eee6de;
+  --screen-bg: #baa4ba;
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #2563eb;
+  --outer-margin: 20px;
+  --highlight-color: rgba(144, 78, 134, 0.787);
+}
+
+* {
+  font-family: 'Bedstead', 'Consolas', monospace;
+}
+
+[data-theme="dark"] {
+  --console-border: #6b7580;
+  --console-bg: #0f172a;
+  --screen-border: #4a4a48;
+  --screen-bg: #050403;
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --primary: #60a5fa;
+  --highlight-color: rgb(148, 95, 159);
+}
+
+.hover-highlight {
+  transition: background-color 0.3s ease;
+}
+
+.hover-highlight:hover {
+  background-color: var(--highlight-color);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+button svg {
+  fill: currentColor;
+}
+
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align:center;
+}
+
+h3 {
+  font-family: 20px;
+}
+
+#alinea {
+    padding-left: 2em;
+}
+
+#alinea2 {
+    padding-left: 4em;
+}
+
+#alinea3 {
+  padding-left: 6em;
+}
+
+#alinea5 {
+  padding-left: 10em;
+}
+
+#date {
+  text-align: center;
+  font-size: 28px;
+  margin: 8px;
+}
+
+.icon-light {
+  display: none;
+}
+
+[data-theme="dark"] .icon-dark {
+  display: none;
+}
+
+[data-theme="dark"] .icon-light {
+  display: inline;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.group {
+    display: flex;
+    gap: 20px;
+}
+html, body {
+  height: 100%;
+  margin: var(--outer-margin);
+}
+
+.square {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-color: var(--console-border);
+  border: 8px solid;
+  border-radius: 18px;
+  padding: calc(2 * var(--outer-margin));
+  background-color: var(--console-bg);
+  flex: 1;
+  width: 60%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.screen-square {
+  align-items: var(--console-border);
+  border-color: var(--screen-border);
+  background-color: var(--screen-bg);
+  border: 4px solid;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  
+}
+
+.square > * {
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Sépare le titre et le bouton */
+  align-items: center; /* Aligne verticalement */
+  padding: 20px;
+}
+
+.separator {
+    border: none;
+    height: 3px;
+    background: var(--text);
+    width: 100%;
+    margin: 10px 0 20px 0;
+    border-radius: 0;
+}
+
+@font-face {
+    font-family: "Bedstead";
+    src: url("assets/bedstead/bedstead.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bar-container {
+  display: flex;
+  align-items: center;
+  flex: 1 1 0;
+  height: 20px;
+  background-color: #0000;
+  border: 3px solid var(--console-border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 10px;
+  box-sizing: border-box;
+  padding: 2px;
+}
+
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: var(--highlight-color);
+  transition: width 0.3s ease, background-color 0.2s ease;
+  border-radius: 2px;
+}
+
+.bottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
